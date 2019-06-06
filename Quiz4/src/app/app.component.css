@@ -1,0 +1,25 @@
+.img{
+    height: 25px;
+    width: 25px;
+    margin:auto;
+}
+
+.borderblue{
+    border: 2px solid blueviolet;
+    margin:3%;
+    align-items: center
+}
+
+.card{
+    border: none;
+}
+
+.cardp{
+    width: 18rem;
+    margin: 2%;
+    position: relative;
+}
+
+.bt{
+    margin:3%;
+}

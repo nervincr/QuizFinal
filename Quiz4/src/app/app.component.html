@@ -1,24 +1,21 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-    <div class=" card " style="width: 18rem; ">
-        <img class="card-img-top " src="... " alt="Card image cap ">
-        <div class="card-body ">
-            <h5 class="card-title ">Card title</h5>
-            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="# " class="btn btn-primary ">Go somewhere</a>
+    <div class="conteiner borderblue">
+        <div class="row cards row-xs-3 row-sm-3 row-md-3 row-lg-3 row-xl-3">
+            <div class=" animated bounce card cardp col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3" *ngFor="let item of items; let i = index">
+                <div *ngIf=!item.ocultar>
+                    <img class="card-img-top img" src={{item.img}} alt="Card image">
+                    <div class="card-body ">
+                        <h5 class="card-title ">{{item.nombre}}</h5>
+                        <p class="card-text ">{{item.descripcion}}</p>
+                        <button class="btn btn-primary" (click)="ocultar(i)">Ocultar</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-<ng-template ngFor let-item [ngForOf]="items" let-i="index" [ngForTrackBy]="trackByFn">
-    <div class=" card " style="width: 18rem; ">
-        <img class="card-img-top " src="... " alt="Card image cap ">
-        <div class="card-body ">
-            <h5 class="card-title ">Card title</h5>
-            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="# " class="btn btn-primary ">Go somewhere</a>
-        </div>
-    </div>
-</ng-template>
+<div class="conteiner">
+    <button class="btn btn-primary bt" (click)="reset()">Desocultar</button>
+</div>
 
 <router-outlet></router-outlet>
